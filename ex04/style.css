@@ -21,7 +21,7 @@ a {
   color: white;
 }
 
-.logo {
+#logo {
   width: 200px;
 }
 
@@ -35,18 +35,6 @@ main {
   width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-iframe {
-  margin: 20px;
-}
-
-form {
-  background-color: #fff;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  color: black;
 }
 
 form h3 {
@@ -66,4 +54,16 @@ input[type="submit"] {
   padding: 8px 12px;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.video {
+  margin: 20px;
+}
+
+.formulario {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
 }
