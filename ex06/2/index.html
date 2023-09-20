@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Radio Buttons</title>
+</head>
+
+<body>
+    <h1>Formulário com Verificação de Campos Obrigatórios</h1>
+
+    <form id="meuFormulario" onsubmit="return validarFormulario()">
+        <label for="campo1">Campo 1 (Obrigatório):</label>
+        <input type="text" id="campo1" name="campo1" required><br>
+
+        <label for="campo2">Campo 2 (Obrigatório):</label>
+        <input type="text" id="campo2" name="campo2" required><br>
+
+        <label for="campo3">Campo 3 (Obrigatório):</label>
+        <input type="text" id="campo3" name="campo3" required><br>
+
+        <label for="campo4">Campo 4 (Obrigatório):</label>
+        <input type="text" id="campo4" name="campo4" required><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            const campo1 = document.getElementById('campo1').value;
+            const campo2 = document.getElementById('campo2').value;
+            const campo3 = document.getElementById('campo3').value;
+            const campo4 = document.getElementById('campo4').value;
+
+            if (!campo1 || !campo2 || !campo3 || !campo4) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return false; // Impede a submissão do formulário
+            } else {
+                alert('Sucesso! Todos os campos obrigatórios foram preenchidos.');
+                return true; // Permite a submissão do formulário
+            }
+        }
+    </script>
+</body>
+
+</html>

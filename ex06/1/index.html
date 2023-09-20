@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Radio Buttons</title>
+</head>
+
+<body>
+    <h1>Formulário com Radio Buttons</h1>
+
+    <form id="meuFormulario">
+        <label for="campo1">Campo 1:</label>
+        <input type="text" id="campo1" name="campo1"><br>
+
+        <label for="campo2">Campo 2:</label>
+        <input type="text" id="campo2" name="campo2"><br>
+
+        <label for="campo3">Campo 3:</label>
+        <input type="text" id="campo3" name="campo3"><br>
+
+        <label>Converter para:</label>
+        <input type="radio" id="maiusculas" name="conversao" value="maiusculas">
+        <label for="maiusculas">Maiúsculas</label>
+
+        <input type="radio" id="minusculas" name="conversao" value="minusculas">
+        <label for="minusculas">Minúsculas</label><br>
+    </form>
+
+    <script>
+        const campo1 = document.getElementById('campo1');
+        const campo2 = document.getElementById('campo2');
+        const campo3 = document.getElementById('campo3');
+        const radios = document.getElementsByName('conversao');
+
+        for (let i = 0; i < radios.length; i++) {
+            radios[i].addEventListener('change', function () {
+                if (radios[i].value === 'maiusculas') {
+                    campo1.value = campo1.value.toUpperCase();
+                    campo2.value = campo2.value.toUpperCase();
+                    campo3.value = campo3.value.toUpperCase();
+                } else if (radios[i].value === 'minusculas') {
+                    campo1.value = campo1.value.toLowerCase();
+                    campo2.value = campo2.value.toLowerCase();
+                    campo3.value = campo3.value.toLowerCase();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
