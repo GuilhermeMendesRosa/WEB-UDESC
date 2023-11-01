@@ -4,6 +4,11 @@ function processExercise() {
     const exercicio = document.getElementById('exercicio').value;
     const series = document.getElementById('series').value;
 
+    if (parseInt(document.getElementById('series').value) != Number) {
+        alert('Por favor, digite um número!');
+        return
+    }
+
     if (!exercicio || !series) {
         event.preventDefault();
         alert('Por favor, preencha todos os campos!');
@@ -23,7 +28,7 @@ function processExercise() {
     if (!exercises) {
         exercises = [];
     } else {
-        exercises = [...localStorage.getItem('exercises')]; 
+        exercises = [...localStorage.getItem('exercises')];
     }
     exercises.push(exercicio)
     localStorage.setItem('exercises', exercises);
